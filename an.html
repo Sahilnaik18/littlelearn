@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+     <!-- Header with Navigation Bar -->
+     <header>
+        <nav class="navbar">
+            <div class="logo">Little Learners</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#guide">Guide</a></li>
+                <li><a href="auth.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Project Analysis</h1>
+
+        <section class="analysis-section">
+            <div class="left-column">
+                <h2>Health Analysis</h2>
+                <div class="chart-container">
+                    <canvas id="myHealthChart"></canvas>
+                </div>
+                <div class="insight-card">
+                    <h3>Health Insights</h3>
+                    <p>This section provides insights related to health trends based on recent data analysis.</p>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <h2>Career Analysis</h2>
+                <div class="chart-container">
+                    <canvas id="myCareerChart"></canvas>
+                </div>
+                <div class="career-progress">
+                    <div class="career-item">
+                        <span>Engineering</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%; background-color: darkblue;"></div>
+                        </div>
+                    </div>
+                    <div class="career-item">
+                        <span>Business</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%; background-color: darkgreen;"></div>
+                        </div>
+                    </div>
+                    <div class="career-item">
+                        <span>Arts</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%; background-color: coral;"></div>
+                        </div>
+                    </div>
+                    <!-- Add more careers as needed -->
+                </div>
+                <div class="insight-card">
+                    <h3>Career Insights</h3>
+                    <p>This section discusses career growth trends and offers insights based on the analysis.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Sample data for Chart.js for Health Analysis
+        const ctxHealth = document.getElementById('myHealthChart').getContext('2d');
+        const myHealthChart = new Chart(ctxHealth, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May'],
+                datasets: [{
+                    label: 'Health Data',
+                    data: [30, 40, 35, 50, 70],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Sample data for Chart.js for Career Analysis
+        const ctxCareer = document.getElementById('myCareerChart').getContext('2d');
+        const myCareerChart = new Chart(ctxCareer, {
+            type: 'pie',
+            data: {
+                labels: ['Engineering', 'Business', 'Arts', 'Health', 'Education'],
+                datasets: [{
+                    label: 'Career Fields',
+                    data: [30, 25, 15, 20, 10],
+                    backgroundColor: [
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>

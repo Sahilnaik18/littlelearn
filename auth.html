@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In & Sign In</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">CareerPath</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#logIn" onclick="showLogIn()">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Log In Form -->
+    <div class="auth-container" id="logInContainer">
+        <h2>Log In</h2>
+        <form action="#" method="post" id="logInForm" onsubmit="return validateLogInForm()">
+            <label for="logInEmail">Email</label>
+            <input type="email" id="logInEmail" name="email" required>
+
+            <label for="logInPassword">Password</label>
+            <input type="password" id="logInPassword" name="password" required minlength="8">
+
+            <button type="submit">Log In</button>
+            <p class="switch-form">New user? <a href="#" onclick="showSignIn()">Sign In</a></p>
+            <p id="logInError" class="error-message"></p>
+        </form>
+    </div>
+
+    <!-- Sign In Form -->
+    <div class="auth-container" id="signInContainer" style="display: none;">
+        <h2>Sign In</h2>
+        <form action="#" method="post" id="signInForm" onsubmit="return validateSignInForm()">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="signInEmail">Email</label>
+            <input type="email" id="signInEmail" name="email" required>
+
+            <label for="signInPassword">Password</label>
+            <input type="password" id="signInPassword" name="password" required minlength="8">
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8">
+
+            <button type="submit">Sign In</button>
+            <p class="switch-form">Already have an account? <a href="#" onclick="showLogIn()">Log In</a></p>
+            <p id="signInError" class="error-message"></p>
+        </form>
+    </div>
+
+    <!-- JavaScript for validation and form toggling -->
+    <script>
+        function showSignIn() {
+            document.getElementById('signInContainer').style.display = 'block';
+            document.getElementById('logInContainer').style.display = 'none';
+        }
+
+        function showLogIn() {
+            document.getElementById('signInContainer').style.display = 'none';
+            document.getElementById('logInContainer').style.display = 'block';
+        }
+
+        function validateEmail(email) {
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return emailPattern.test(email);
+        }
+
+        function validatePassword(password) {
+            const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            return passwordPattern.test(password);
+        }
+
+        function validateLogInForm() {
+            const email = document.getElementById('logInEmail').value;
+            const password = document.getElementById('logInPassword').value;
+            const errorElement = document.getElementById('logInError');
+
+            if (!validateEmail(email)) {
+                errorElement.textContent = "Please enter a valid email address.";
+                return false;
+            }
+            if (!validatePassword(password)) {
+                errorElement.textContent = "Password must be at least 8 characters long, containing letters and numbers.";
+                return false;
+            }
+            errorElement.textContent = "";
+            return true;
+        }
+
+        function validateSignInForm() {
+            const email = document.getElementById('signInEmail').value;
+            const password = document.getElementById('signInPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const errorElement = document.getElementById('signInError');
+
+            if (!validateEmail(email)) {
+                errorElement.textContent = "Please enter a valid email address.";
+                return false;
+            }
+            if (!validatePassword(password)) {
+                errorElement.textContent = "Password must be at least 8 characters long, containing letters and numbers.";
+                return false;
+            }
+            if (password !== confirmPassword) {
+                errorElement.textContent = "Passwords do not match.";
+                return false;
+            }
+            errorElement.textContent = "";
+            return true;
+        }
+    </script>
+</body>
+</html>

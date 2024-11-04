@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="consult.css">
+    <title>Consultant Page</title>
+</head>
+<body>
+     <!-- Header with Navigation Bar -->
+     <header>
+        <nav class="navbar">
+            <div class="logo">Little Learners</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#guide">Guide</a></li>
+                <li><a href="auth.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tab-container">
+        <div class="tabs">
+            <button onclick="showTab('all')">All</button>
+            <button onclick="showTab('health')">Health</button>
+            <button onclick="showTab('parenting')">Parenting</button>
+            <button onclick="showTab('career')">Career</button>
+        </div>
+        <div id="all" class="tab-content">
+            <h2>All Consultants</h2>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">General consultant for various queries.</p>
+                    <p class="name">John Doe</p>
+                    <p class="rating">Rating: ★★★★★</p>
+                    <button class="contact-button" onclick="contact('john.doe@example.com', '1234567890')">Contact</button>
+                </div>
+            </div>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Life coach for personal development.</p>
+                    <p class="name">Anna Taylor</p>
+                    <p class="rating">Rating: ★★★★☆</p>
+                    <button class="contact-button" onclick="contact('anna.taylor@example.com', '1234567891')">Contact</button>
+                </div>
+            </div>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Expert in conflict resolution.</p>
+                    <p class="name">Michael Brown</p>
+                    <p class="rating">Rating: ★★★★★</p>
+                    <button class="contact-button" onclick="contact('michael.brown@example.com', '1234567892')">Contact</button>
+                </div>
+            </div>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Financial advisor for investments.</p>
+                    <p class="name">Laura Wilson</p>
+                    <p class="rating">Rating: ★★★★☆</p>
+                    <button class="contact-button" onclick="contact('laura.wilson@example.com', '1234567893')">Contact</button>
+                </div>
+            </div>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Motivational speaker and trainer.</p>
+                    <p class="name">James Miller</p>
+                    <p class="rating">Rating: ★★★★★</p>
+                    <button class="contact-button" onclick="contact('james.miller@example.com', '1234567894')">Contact</button>
+                </div>
+            </div>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Nutritionist specializing in diets.</p>
+                    <p class="name">Jessica Green</p>
+                    <p class="rating">Rating: ★★★★☆</p>
+                    <button class="contact-button" onclick="contact('jessica.green@example.com', '1234567895')">Contact</button>
+                </div>
+            </div>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Expert in stress management.</p>
+                    <p class="name">David Lee</p>
+                    <p class="rating">Rating: ★★★★☆</p>
+                    <button class="contact-button" onclick="contact('david.lee@example.com', '1234567896')">Contact</button>
+                </div>
+            </div>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Specialist in addiction counseling.</p>
+                    <p class="name">Sarah Johnson</p>
+                    <p class="rating">Rating: ★★★★★</p>
+                    <button class="contact-button" onclick="contact('sarah.johnson@example.com', '1234567897')">Contact</button>
+                </div>
+            </div>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Career coach for professional growth.</p>
+                    <p class="name">Brian Harris</p>
+                    <p class="rating">Rating: ★★★★☆</p>
+                    <button class="contact-button" onclick="contact('brian.harris@example.com', '1234567898')">Contact</button>
+                </div>
+            </div>
+        </div>
+        <div id="health" class="tab-content" style="display: none;">
+            <h2>Health Consultants</h2>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Cardiologist for heart health.</p>
+                    <p class="name">Dr. Emily Carter</p>
+                    <p class="rating">Rating: ★★★★★</p>
+                    <button class="contact-button" onclick="contact('emily.carter@example.com', '1234567899')">Contact</button>
+                </div>
+            </div>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Dietitian for nutritional guidance.</p>
+                    <p class="name">Alex Martinez</p>
+                    <p class="rating">Rating: ★★★★☆</p>
+                    <button class="contact-button" onclick="contact('alex.martinez@example.com', '1234567800')">Contact</button>
+                </div>
+            </div>
+        </div>
+        <div id="parenting" class="tab-content" style="display: none;">
+            <h2>Parenting Consultants</h2>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Expert in child development.</p>
+                    <p class="name">Nina Roberts</p>
+                    <p class="rating">Rating: ★★★★☆</p>
+                    <button class="contact-button" onclick="contact('nina.roberts@example.com', '1234567801')">Contact</button>
+                </div>
+            </div>
+        </div>
+        <div id="career" class="tab-content" style="display: none;">
+            <h2>Career Consultants</h2>
+            <div class="consultant">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 14c-4.42 0-8 2.68-8 6v2h16v-2c0-3.32-3.58-6-8-6z"></path></svg>
+                <div class="consult-info">
+                    <p class="description">Resume and interview preparation expert.</p>
+                    <p class="name">Olivia Smith</p>
+                    <p class="rating">Rating: ★★★★☆</p>
+                    <button class="contact-button" onclick="contact('olivia.smith@example.com', '1234567802')">Contact</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function showTab(tab) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(t => {
+                t.style.display = 'none';
+            });
+            document.getElementById(tab).style.display = 'block';
+        }
+
+        function contact(email, phone) {
+            const emailLink = `mailto:${email}`;
+            const phoneLink = `tel:${phone}`;
+            if (confirm(`Contact via Email: ${email} or Phone: ${phone}?`)) {
+                window.location.href = emailLink;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+/* Reset default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f8ff;
+}
+/* General Navbar Styles */
+.navbar {
+    width: 100vw;
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-right: auto; /* Aligns logo to the left */
+}
+
+/* Nav Links and List Styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Search Form Styles */
+.search-bar {
+    margin-right: 10px; /* Small gap between search bar and 'Home' link */
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 1em;
+    width: 160px;
+    height: 40px;
+}
+
+.search-button {
+    padding: 8px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 40px;
+    margin-top: -9px;;
+}
+
+.search-button:hover {
+    background-color: #777;
+}
+
+
+/* Ad Slider Section */
+.ad-slider {
+    width: 100%;
+    background-color: #eee;
+    padding: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.slider {
+    display: flex;
+    animation: slide 10s infinite linear;
+}
+
+.slide {
+    flex: 1;
+    min-width: 100%;
+    font-size: 1.2em;
+    padding: 10px;
+    color: #333;
+}
+
+/* Animation for sliding ads */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Cards Section */
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 220px; /* Adjusted width for better alignment */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column;
+    justify-content: space-between; /* Evenly distribute space */
+    height: 300px; /* Set a fixed height for uniformity */
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+
+.icon {
+    margin-bottom: 10px; /* Space between icon and text */
+    display: flex; /* Center the icon */
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+}
+
+
+.card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+.card button:hover {
+    background-color: #555;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+.general-requirements, .nutrients, .calculator {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#bmi-result {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Gender Selection Styles */
+.gender-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin: 20px 0; /* Space above and below the buttons */
+}
+
+.gender-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.gender-button:hover {
+    background-color: #ddd; /* Light gray on hover */
+}
+
+.male {
+    background-color: #4a90e2; /* Blue color for Male button */
+    color: white;
+}
+
+.female {
+    background-color: #e91e63; /* Pink color for Female button */
+    color: white;
+}
+
+.icon {
+    margin-right: 8px; /* Space between icon and text */
+}

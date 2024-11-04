@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Page</title>
+    <link rel="stylesheet" href="health.css">
+</head>
+<body>
+
+    <!-- Header with Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Little Learners</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="guide.html">Guide</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="health.html">Health</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- General Requirements Section -->
+    <section class="general-requirements">
+        <h2>General Health Requirements</h2>
+        <p>Maintaining a healthy lifestyle involves a balanced diet, regular physical activity, and proper sleep. Here are some key requirements:</p>
+        <ul>
+            <li>Consume a variety of foods from all food groups.</li>
+            <li>Maintain a balanced intake of macronutrients (carbohydrates, proteins, fats).</li>
+            <li>Stay hydrated by drinking enough water daily.</li>
+            <li>Engage in at least 150 minutes of moderate aerobic activity each week.</li>
+            <li>Get sufficient sleep (7-9 hours per night).</li>
+        </ul>
+    </section>
+
+    <!-- Nutrients Section -->
+    <section class="nutrients">
+        <h2>Nutrients</h2>
+        <p>Nutrients are essential for the body to function properly. Here are the main categories:</p>
+        <ul>
+            <li><strong>Carbohydrates:</strong> Provide energy. Found in grains, fruits, and vegetables.</li>
+            <li><strong>Proteins:</strong> Build and repair tissues. Found in meat, fish, beans, and nuts.</li>
+            <li><strong>Fats:</strong> Support cell growth and energy. Found in oils, butter, and avocados.</li>
+            <li><strong>Vitamins:</strong> Support various body functions. Found in fruits, vegetables, and supplements.</li>
+            <li><strong>Minerals:</strong> Essential for bone health and other functions. Found in dairy, meat, and greens.</li>
+            <li><strong>Water:</strong> Vital for hydration and bodily functions.</li>
+        </ul>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator">
+        <h2>BMI Calculator</h2>
+        <form id="bmi-form">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" required>
+
+            <label for="height">Height (m):</label>
+            <input type="number" id="height" step="0.01" required>
+
+            <button type="submit">Calculate BMI</button>
+        </form>
+        <div id="bmi-result"></div>
+    </section>
+
+    <script>
+        document.getElementById('bmi-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value);
+
+            if (weight > 0 && height > 0) {
+                const bmi = (weight / (height * height)).toFixed(2);
+                document.getElementById('bmi-result').innerText = `Your BMI is ${bmi}`;
+            } else {
+                document.getElementById('bmi-result').innerText = 'Please enter valid weight and height.';
+            }
+        });
+    </script>
+
+</body>
+</html>

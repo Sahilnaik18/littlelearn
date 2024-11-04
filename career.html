@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Options</title>
+    <link rel="stylesheet" href="career.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Career Explorer</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="career.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Explore Career Options</h1>
+        <p>Find the career that best suits your skills and interests.</p>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filters">
+        <h2>Filter Careers</h2>
+        <div class="filter-category">
+            <label for="industry">Industry:</label>
+            <select id="industry" onchange="filterCareers()">
+                <option value="all">All</option>
+                <option value="technology">Technology</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="finance">Finance</option>
+                <option value="education">Education</option>
+                <option value="art">Arts & Design</option>
+                <option value="sports">Sports</option>
+                <option value="business">Business</option>
+            </select>
+        </div>
+        <div class="filter-category">
+            <label for="level">Experience Level:</label>
+            <select id="level" onchange="filterCareers()">
+                <option value="all">All</option>
+                <option value="entry">Entry-Level</option>
+                <option value="mid">Mid-Level</option>
+                <option value="senior">Senior-Level</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Career Options Section -->
+    <section class="career-options">
+        <!-- Technology Careers -->
+        <div class="career-card" data-industry="technology" data-level="entry">
+            <h3>Software Developer</h3>
+            <p>Develop and maintain software applications.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="technology" data-level="mid">
+            <h3>Data Analyst</h3>
+            <p>Analyze and interpret complex data to help decision-making.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="technology" data-level="senior">
+            <h3>IT Manager</h3>
+            <p>Oversee technology infrastructure and IT staff.</p>
+            <button>Learn More</button>
+        </div>
+        
+        <!-- Healthcare Careers -->
+        <div class="career-card" data-industry="healthcare" data-level="entry">
+            <h3>Medical Assistant</h3>
+            <p>Assist doctors and nurses with patient care.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="healthcare" data-level="mid">
+            <h3>Registered Nurse</h3>
+            <p>Provide and coordinate patient care.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="healthcare" data-level="senior">
+            <h3>Healthcare Administrator</h3>
+            <p>Manage healthcare facilities and operations.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Finance Careers -->
+        <div class="career-card" data-industry="finance" data-level="entry">
+            <h3>Bank Teller</h3>
+            <p>Handle routine financial transactions for customers.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="finance" data-level="mid">
+            <h3>Financial Analyst</h3>
+            <p>Analyze financial data and trends to guide investments.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="finance" data-level="senior">
+            <h3>Investment Manager</h3>
+            <p>Oversee investment portfolios and financial assets.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Education Careers -->
+        <div class="career-card" data-industry="education" data-level="entry">
+            <h3>Teacher Assistant</h3>
+            <p>Support teachers in classroom activities.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="education" data-level="mid">
+            <h3>High School Teacher</h3>
+            <p>Teach and mentor high school students.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="education" data-level="senior">
+            <h3>School Principal</h3>
+            <p>Manage school operations and staff.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Arts & Design Careers -->
+        <div class="career-card" data-industry="art" data-level="entry">
+            <h3>Graphic Designer</h3>
+            <p>Create visual content for print and digital media.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="art" data-level="mid">
+            <h3>Interior Designer</h3>
+            <p>Design and decorate interior spaces.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="art" data-level="senior">
+            <h3>Creative Director</h3>
+            <p>Lead creative projects and design teams.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Sports Careers -->
+        <div class="career-card" data-industry="sports" data-level="entry">
+            <h3>Sports Coach</h3>
+            <p>Coach and mentor athletes in various sports.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="sports" data-level="mid">
+            <h3>Sports Therapist</h3>
+            <p>Help athletes recover from injuries.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="sports" data-level="senior">
+            <h3>Sports Manager</h3>
+            <p>Oversee sports teams and their operations.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Business Careers -->
+        <div class="career-card" data-industry="business" data-level="entry">
+            <h3>Sales Associate</h3>
+            <p>Engage with customers to sell products and services.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="business" data-level="mid">
+            <h3>Marketing Manager</h3>
+            <p>Develop and execute marketing strategies.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="career-card" data-industry="business" data-level="senior">
+            <h3>Chief Executive Officer</h3>
+            <p>Lead and make strategic decisions for a company.</p>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+    <script src="career.js"></script>
+</body>
+</html>
